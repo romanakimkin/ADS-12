@@ -10,13 +10,17 @@ class Train {
     Cage *prev;
   };
   Train::Cage* create(bool _light);
+ 
   Cage *first;
   Cage *last;
+ 
   int countOp = 0;
+ 
  public:
   Train() : first(nullptr), last(nullptr) { }
   void addCage(bool _light);
   int getLength();
-  int getOpCount();     
+  int getOpCount();
+  ~Train();
 };
 #endif  // INCLUDE_TRAIN_H_
