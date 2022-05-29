@@ -5,17 +5,17 @@
 class Train {
  private:
   struct Cage {
-    bool light; // состояние лампочки
+    bool light;
     Cage *next;
     Cage *prev;
   };
   Train::Cage* create(bool _light);
- 
+
   Cage *first;
   Cage *last;
- 
+
   int countOp = 0;
- 
+
  public:
   Train() : first(nullptr), last(nullptr) { }
   void addCage(bool _light);
